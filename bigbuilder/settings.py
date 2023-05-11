@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Third party apps
+    'drf_yasg',
     'oauth2_provider',
     'rest_framework',
     # Internal apps
@@ -44,6 +45,16 @@ REST_FRAMEWORK = {
 
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     # 'PAGE_SIZE': 20,
+}
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        "Auth Token [Bearer Token]": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
 }
 
 MIDDLEWARE = [

@@ -21,6 +21,7 @@ class TaskPic(models.Model):
     def __str__(self):
         return self.task.name + " - " + self.pic.name
 
+
 class TaskPayment(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     payment = models.DecimalField(max_digits=10, decimal_places=2)

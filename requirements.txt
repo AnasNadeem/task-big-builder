@@ -4,6 +4,7 @@ Django>3
 django-environ
 django-oauth-toolkit>2
 djangorestframework>3
+drf-yasg>1
 django-cors-headers>3
 flake8
 oauthlib>2.5
