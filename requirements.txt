@@ -1,0 +1,8 @@
+asgiref
+Django>3
+django-environ
+djangorestframework>3
+django-cors-headers>3
+flake8
+Pillow
+pycodestyle
