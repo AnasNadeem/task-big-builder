@@ -1,0 +1,23 @@
+Task 
+	Big Builders is a construction and structural engineering company. They have multiple
+	subcontractors who perform various tasks for them, e.g.,
+
+	• Ground levelling
+	• Cleaning of site rubbish
+	• Landscape work
+
+These subcontractors submit a work completion report along with a payment demand. Currently this
+requires a site engineer to visit the site or see photographs to verify progress.
+
+Big Builders would like a build a service in which the contractors would be able to submit these
+pictures and based on services interpretation of work completion, it would automatically release
+payment.
+
+Please provide a high level solution approach to achieve this using Python AI/ML methods which
+must be able to run on premise infrastructure.
+
+Key Considerations:
+
+• Users must be authenticated via OAUTH
+• If your solution needs a BOT, utilize RASA
+• Solution must be portable across environments both on premise and cloud

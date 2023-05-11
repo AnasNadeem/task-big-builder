@@ -25,9 +25,25 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Third party apps
+    'oauth2_provider',
+    'rest_framework',
     # Internal apps
     'bigbuilderapp',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    ),
+    # 'DEFAULT_FILTER_BACKENDS': (
+    #     'django_filters.rest_framework.DjangoFilterBackend',
+    # ),
+    # 'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE': 20,
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
