@@ -85,6 +85,9 @@ class TaskViewSet(ModelViewSet):
     serializer_class = TaskSerializer
     permission_classes = [IsAuthenticated, TaskPermission]
 
+    def get_queryset(self):
+        return super().get_queryset().filter(user=self.request.user)
+
     @action(detail=True, methods=["get"])
     def pics(self, request, pk=None):
         task = self.get_object()
@@ -105,9 +108,14 @@ class TaskPicViewSet(ModelViewSet):
     serializer_class = TaskPicSerializer
     permission_classes = [IsAuthenticated, TaskPicPermission]
 
+    def get_queryset(self):
+        return super().get_queryset().filter(task__user=self.request.user)
+
 
 class TaskPaymentViewSet(ModelViewSet):
     queryset = TaskPayment.objects.all()
     serializer_class = TaskPaymentSerializer
     permission_classes = [IsAuthenticated, TaskPaymentPermission]
 
+    def get_queryset(self):
+        return super().get_queryset().filter(task__user=self.request.user)
